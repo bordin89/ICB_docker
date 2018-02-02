@@ -1,0 +1,16 @@
+#Modify according to your system configuration and paths. Rename to "config.txt"
+
+[binaries]
+#specify the paths required by icb.py
+blast = /path/toyour/ncbi-blast-2.2.29+/bin/
+hhsuite = /path/toyour/hhsuite-*.*/bin/
+swissprot = /path/toyour/swissprotdb/
+signalp = /path/toyour/signalp/signalp-4.1
+tmhmm = /path/toyour/tmhmm-2.0c/bin/
+interproscan = /path/toyour/interproscan/
+iupred = /path/toyour/iupred-1.0/
+cpus = specify the numbers of CPUs you want to use
+sprot_reduced = path to uniprot (reduced)
+multithread = /path/to/hhsuite-2.0.16-linux-x86_64/scripts/
+uniprot = /pathtohhsuitedb/HHsuite/uniprot20_2013_03/uniprot20_2013_03
+pdb = /pathtopdbdbforhhsuite/pdb70_XMonYr/pdbXMonYr_XMonYr_hhm_db

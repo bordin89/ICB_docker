@@ -1,0 +1,17 @@
+#This is an example of our config.txt
+#Modify config_default.txt accordingly and rename it to config.txt
+
+[binaries]
+#specify the paths required by icb.py and cpus (only for certain tools)
+blast = /home/programs/ncbi-blast-2.2.29+/bin/
+hhsuite = /home/programs/hhsuite-2.0.16-linux-x86_64/bin/
+swissprot = /scratch/db/Blast/
+signalp = /home/programs/signalp-4.1
+tmhmm = /home/programs/tmhmm-2.0c/bin/
+interproscan = /home/programs/interproscan-5.16-55.0/
+iupred = /home/programs/iupred-1.0/
+cpus = 20
+sprot_reduced = /home/db/Uniprot/
+multithread = /home/programs/hhsuite-2.0.16-linux-x86_64/scripts/
+uniprot = /scratch/db/HHsuite/uniprot20_2013_03/uniprot20_2013_03
+pdb = /scratch/db/HHsuite/pdb70_16May15/pdb70_16May15_hhm_db
