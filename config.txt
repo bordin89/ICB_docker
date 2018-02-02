@@ -3,16 +3,16 @@
 
 [binaries]
 #specify the paths required by icb.py and cpus (only for certain tools)
-blast = /usr/bin/psiblast
-hhsuite = /home/programs/hhsuite-2.0.16-linux-x86_64/bin/
-swissprot = /scratch/db/Blast/
-signalp = /home/programs/signalp-4.1
-tmhmm = /home/programs/tmhmm-2.0c/bin/
-interproscan = /home/programs/interproscan-5.16-55.0/
-iupred = /home/programs/iupred-1.0/
+blast = /usr/bin/
+#hhsuite = //bin/ "do a which hhsearch"
+swissprot = /swissprot
+#signalp = /home/programs/signalp-4.1
+tmhmm = /root/anaconda/bin/
+interproscan = /interproscan/
+#iupred = /home/programs/iupred-1.0/
 #modify number of cpus accordingly to your system specifications
 cpus = 10
-sprot_reduced = /home/db/Uniprot/
-multithread = /home/programs/hhsuite-2.0.16-linux-x86_64/scripts/
-uniprot = /scratch/db/HHsuite/uniprot20_2013_03/uniprot20_2013_03
-pdb = /scratch/db/HHsuite/pdb70_16May15/pdb70_16May15_hhm_db
+sprot_reduced = /
+multithread = /hh-suite/scripts/
+uniprot = /uniprot20_2016_02/uniprot20_2016_02
+pdb = /
