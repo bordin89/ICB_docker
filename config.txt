@@ -5,7 +5,7 @@
 #specify the paths required by icb.py and cpus (only for certain tools)
 blast = /usr/bin/
 hhsuite = /usr/bin/
-swissprot = /swissprot
+swissprot = /
 signalp = /home/programs/signalp-4.1
 tmhmm = /root/anaconda/bin/
 interproscan = /interproscan/
