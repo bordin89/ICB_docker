@@ -83,7 +83,7 @@ if psiblast or allmodules==True:
 	#Runs PSIBLAST if output not found in cwd
 	if os.path.isfile(current_path+"/PSIBLAST_raw_results_"+multifasta[:-11]+".txt") == False:
 		print "Running PSIBLAST\n"
-		os.system(blast_path+"psiblast -query "+multifasta+" -db "+swissprot_path+"/swissprot -num_iterations 3 -out PSIBLAST_raw_results_"+multifasta[:-11]+".txt -outfmt 7 -parse_deflines -num_threads "+cpus)
+		os.system(blast_path+"psiblast -query "+multifasta+" -db "+swissprot_path+"/swissprot_db -num_iterations 3 -out PSIBLAST_raw_results_"+multifasta[:-11]+".txt -outfmt 7 -parse_deflines -num_threads "+cpus)
 		os.system("gzip -f PSIBLAST_raw_results_"+multifasta[:-11]+".txt")
 	else:
 		print "\nPSIBLAST output detected in cwd!"
