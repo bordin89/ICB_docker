@@ -9,7 +9,7 @@ swissprot = /
 signalp = /home/programs/signalp-4.1
 tmhmm = /root/anaconda/bin/
 interproscan = /interproscan/
-iupred = /home/programs/iupred-1.0/
+iupred = /iupred-1.0/
 #modify number of cpus accordingly to your system specifications
 cpus = 10
 sprot_reduced = /
