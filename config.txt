@@ -14,5 +14,5 @@ iupred = /iupred-1.0/
 cpus = 10
 sprot_reduced = /
 multithread = /hh-suite/scripts/
-uniprot = /uniprot20_2016_02/uniprot20_2016_02
+uniprot = /uniprot20_2013_03/uniprot20_2013_03
 pdb = /pdb70_hhm_db
