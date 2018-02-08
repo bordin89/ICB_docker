@@ -176,5 +176,5 @@ if iupred or allmodules==True:
 	os.system("perl "+os.path.dirname(os.path.realpath(sys.argv[0]))+"/order_entries.pl 04_DIS_"+multifasta[:-11]+".tsv 00_ini*")
 	os.system("gzip -f 04_DIS_"+multifasta[:-11]+".tsv")
 
-os.system("python "+os.path.dirname(os.path.realpath(sys.argv[0]))+"/make_tsv_table.py 00* "+psi_id+" "+sig_id+" "+tmh_id+" "+iup_id+" "+ipr_id+" "+hhb_id+" "+hhpr_id+" > "+multifasta+"_table.tsv")
-os.system("perl "+os.path.dirname(os.path.realpath(sys.argv[0]))+"/tsv_to_html.pl "+multifasta)
+os.system("python "+os.path.dirname(os.path.realpath(sys.argv[0]))+"/make_tsv_table.py 00* "+psi_id+" "+sig_id+" "+tmh_id+" "+iup_id+" "+ipr_id+" "+hhb_id+" "+hhpr_id+" > "+multifasta[:-11]+"_table.tsv")
+os.system("perl "+os.path.dirname(os.path.realpath(sys.argv[0]))+"/tsv_to_html.pl "+multifasta[:-11])
