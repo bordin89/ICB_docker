@@ -18,7 +18,7 @@ for file in (sys.argv[2:]):
 	i=0
 	for line in infile:
 		info = line.split("\t",1)[1].rstrip()
-		info="".join(re.split("\s+", line.rstrip())[1:])
+		#info="".join(re.split("\s+", line.rstrip())[1:])
 		Data[i]+="\t"+info
 		i+=1
 	infile.close()
