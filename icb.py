@@ -108,7 +108,7 @@ if interproscan or allmodules==True:
 		os.system("cp "+multifasta+" InterProScan_results/"+multifasta)
 		os.system("cd InterProScan_results/")
 		os.system("perl "+os.path.dirname(os.path.realpath(sys.argv[0]))+"/splitfasta_mod.pl "+multifasta)
-		os.system("for file in *.seq; do "+interproscan_path+"/interproscan.sh -mode cluster -clusterrunid iproscan -i $file -d InterProScan_results -f tsv,xml -iprlookup -goterms -pa; done")
+		os.system("for file in *.seq; do "+interproscan_path+"/interproscan.sh -i $file -d InterProScan_results -f tsv,xml -goterms -pa; done")
 		os.system("cd ../")
 		os.system("cat InterProScan_results/*.xml > InterProScan_results/InterProScan_dump_"+multifasta[:-11])
 		os.system("rm *.seq && rm -rf temp/")
