@@ -12,7 +12,7 @@ print "+"+"-"*48+"+"
 print "|"+" "*48+"|"
 print "|"+" "*8+"Integrative Cell Biology Pipeline"+" "*7+"|"
 print "|"+" "*48+"|"
-print "|"+" "*13+"Nicola Bordin, CABD UPO"+" "*11+"|"
+print "|"+" "*13+"Nicola Bordin, CABD UPO"+" "*12+"|"
 print "+"+"-"*48+"+"
 #Argument parser
 parser.add_argument("-o", "--output-directory", help="The directory where to write the output files. Defaults to WORKDIR.", metavar="PATH", default=".")
