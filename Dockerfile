@@ -75,4 +75,5 @@ RUN echo "export IUPred_PATH=/iupred-1.0/" >> /root/.bashrc
 RUN source /root/.bashrc
 #Create folder for sequence analysis
 RUN mkdir data
+CMD cd data/
 
