@@ -38,7 +38,7 @@ To pull the image
 ```
 docker pull bordin89/icb
 ```
-### Point the container to your data and run it.
+### 3. Point the container to your data and run it.
 
 The container contains already all the tools and databases. You'll need to point the folder containing your data to the folder "/data/" . Run the container using the command
 
@@ -50,7 +50,7 @@ an example:
 docker run -it -v /cluster/data/proteomes/e_coli_proteome.fasta:/data/ bordin89/icb
 ```
 
-### Run cICB
+### 4. Run cICB
 
 To see the main script helper, type
 
@@ -81,7 +81,14 @@ Modules and command-line parameters
 
 >TMHMM (-tmh)
 
-The config.txt file
+### The config.txt file for multicore processing
 
-A config.txt file is included in the ICB package.
-After installing the tools required by ICB, please modify the config.txt file according to your installation paths and the amount of cores available for BLAST and HHblits/HHpred.
+A config.txt file is located at ``` /ICB_docker/config.txt ```. Modify the "cpus = 2" parameter according to your machine.
+
+Here you can set the amount of cores available for PSIBLAST, HHpred and HHblits. 
+
+The same parameter needs to be passed to the container before launch.
+```
+docker run -it -v /cluster/data/e_coli_proteome.fasta:/data/ bordin89/icb --cpus 10
+```
+
