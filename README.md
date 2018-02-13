@@ -52,6 +52,11 @@ docker run -it -v /cluster/data/proteomes/e_coli_proteome.fasta:/data/ bordin89/
 
 ### 4. Run cICB
 
+Enter your folder containing your data.
+
+```
+cd data/
+```
 To see the main script helper, type
 
 ```
@@ -89,6 +94,6 @@ Here you can set the amount of cores available for PSIBLAST, HHpred and HHblits.
 
 The same parameter needs to be passed to the container before launch.
 ```
-docker run -it -v /cluster/data/e_coli_proteome.fasta:/data/ bordin89/icb --cpus 10
+docker run -it -v /cluster/data/e_coli_proteome.fasta:/data/ --cpus 10 bordin89/icb
 ```
 
