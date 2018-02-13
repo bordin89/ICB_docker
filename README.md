@@ -38,20 +38,48 @@ To pull the image
 ```
 docker pull bordin89/icb
 ```
+### Point the container to your data and run it.
 
-Due to the modular approach, you need to install one, a few or all the following tools (according to your needs).
+The container contains already all the tools and databases. You'll need to point the folder containing your data to the folder "/data/" . Run the container using the command
 
--PSIBLAST
+```
+docker run -it -v /path/in/my/computer/to/data:/data/ bordin89/icb
+```
+an example:
+```
+docker run -it -v /cluster/data/proteomes/e_coli_proteome.fasta:/data/ bordin89/icb
+```
 
--HHsuite
+### Run cICB
 
--InterProScan
+To see the main script helper, type
 
--PSIPRED
+```
+python /ICB_docker/icb.py -h
+```
 
--IUPRED
+You can run all the modules at once, or just the ones you need.
 
--TMHMM
+```
+python /ICB_docker/icb.py -i my_sequences.fasta -all
+python /ICB_docker/icb.py -i my_sequences.fasta -tmh -hhblits -hhpred -iup -psiblast
+```
+
+Modules and command-line parameters
+
+>PSIBLAST (-psiblast)
+
+>HHPred on PDB (-hhpred)
+
+>HHblits on UniProt (-hhblits)
+
+>InterProScan (-ipr)
+
+>SignalP (-sigp)
+
+>IUPRED (-iup)
+
+>TMHMM (-tmh)
 
 The config.txt file
 
