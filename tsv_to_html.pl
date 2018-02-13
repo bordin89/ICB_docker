@@ -175,7 +175,7 @@ body {
 }
 </style>
 </head>
-<h1><span> $table_name proteome annotation</span></h1>
+<h1><span> $table_name annotations</span></h1>
 <body onload="myFunction()" style="margin:0;">
 
 <div id="loader"></div>
