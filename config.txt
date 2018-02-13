@@ -11,7 +11,7 @@ tmhmm = /tmhmm-2.0c/bin/
 interproscan = /interproscan/
 iupred = /iupred-1.0/
 #modify number of cpus accordingly to your system specifications
-cpus = 10
+cpus = 2
 sprot_reduced = /
 multithread = /hh-suite/scripts/
 uniprot = /uniprot20_2013_03/uniprot20_2013_03
