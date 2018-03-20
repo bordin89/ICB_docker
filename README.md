@@ -97,3 +97,8 @@ The same parameter needs to be passed to the container before launch.
 docker run -it -v /cluster/data/e_coli_proteome.fasta:/data/ --cpus 10 bordin89/icb
 ```
 
+### Enjoy!
+
+Your data is available in the same input folder. Here you can find a tsv (tab-separated-values) and the HTML with the 
+
+DataTables. You can also find the raw data for the predictors organized in archives and folders.
