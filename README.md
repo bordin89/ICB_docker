@@ -1,8 +1,8 @@
-# cICB_pipeline
+# ICB_pipeline
 
-Welcome to cICB!
+Welcome to ICB!
 
-cICB is a computational pipeline for protein annotation. Using an integrative approach, it allows the user to annotate several protein features such as domains, TMHs, disorder and identity through PSIBLAST, HHpred and InterProScan.
+ICB is a computational pipeline for protein annotation. Using an integrative approach, it allows the user to annotate several protein features such as domains, TMHs, disorder and identity through PSIBLAST, HHpred and InterProScan.
 
 The input: your sequences in a single multiFASTA file.
 
@@ -11,27 +11,27 @@ The output: DataTables to browse your data (example: http://pvcbacteria.org/mywi
 
 
 
-## Using cICB through Docker
+## Using ICB through Docker
 
 ### System Requirements
 
-cICB pipeline runs on every system architecture and OS supported by Docker. 
+ICB pipeline runs on every system architecture and OS supported by Docker. 
 The pipeline supports multicore systems. While the Docker container can run even on a laptop, the pipeline requires a discrete amount of hard disk space (~130GB) due to databases size and was built with server-side processing in mind.
 Downloading through a high-speed broadband connection is strongly suggested.
 
 The setup is quite easy.
 
 1. Install Docker for your system.
-2. Pull the cICB image from DockerHub.
+2. Pull the ICB image from DockerHub.
 3. Point the container to your data and run it.
-4. Run cICB.
+4. Run ICB.
 5. Enjoy!
 
 ### 1. Install Docker for your system 
 
 Get Docker for your OS from https://store.docker.com/search?type=edition&offering=community.
 
-### 2. Pull the cICB image from DockerHub
+### 2. Pull the ICB image from DockerHub
 
 To pull the image
 
@@ -50,7 +50,7 @@ an example:
 docker run -it -v /cluster/data/proteomes/e_coli_proteome.fasta:/data/ bordin89/icb
 ```
 
-### 4. Run cICB
+### 4. Run ICB
 
 Enter your folder containing your data.
 
