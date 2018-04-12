@@ -17,6 +17,7 @@ open (IN,"gzip -dc $input_file |") or die "\nCould not open $input_file\n";
 
 while (<IN>) {
 	if ( $_ =~ /\<xref desc=\"(.*)\" db=\"(.*)\" id=\"(.*)\" name=\"(.*)\"\/\>/) {
+				
 		$query = $3;
 		$annotation{$query}{"order"} 		= $i;
 		$annotation{$query}{"Pfam"} 		= "-";
@@ -37,7 +38,34 @@ while (<IN>) {
 
 
 		$i++;
+
+	
+	} elsif ($_ =~ /\<xref/){
+				if ($_ =~ /id=\"(.*)\"/){
+				 $query=$1;
+				 $annotation{$query}{"order"}            = $i;
+                $annotation{$query}{"Pfam"}             = "-";
+                $annotation{$query}{"TIGRFAM"}          = "-";
+                $annotation{$query}{"Gene3D"}           = "-";
+                $annotation{$query}{"PANTHER"}          = "-";
+                $annotation{$query}{"ProSiteProfiles"}  = "-";
+                $annotation{$query}{"Hamap"}            = "-";
+                $annotation{$query}{"SUPERFAMILY"}      = "-";
+                $annotation{$query}{"PRINTS"}           = "-";
+                $annotation{$query}{"PIRSF"}            = "-";
+                $annotation{$query}{"SMART"}            = "-";
+                $annotation{$query}{"GO_BIO"}           = "-";
+                $annotation{$query}{"GO_MOL"}           = "-";
+                $annotation{$query}{"GO_CEL"}           = "-";
+                $annotation{$query}{"IPRO"}             = "-";
+                $annotation{$query}{"pathway"}          = "-";
+
+
+                $i++;
+
+				}
 		
+	
 	} elsif ( $_ =~ /\<signature ac=\"(PF.*)\" desc=\"(.*)\" name=\"(.*)\">/ ) {  				# Pfam 
 			if ($annotation{$query}{"Pfam"} eq "-"){
 				$annotation{$query}{"Pfam"} = "$1: $2";
@@ -152,6 +180,7 @@ while (<IN>) {
 	} elsif ( $_ =~ /\<\/protein\-matches\>/ ) {
 	
 	}
+	 
 }
 close (IN);
 
