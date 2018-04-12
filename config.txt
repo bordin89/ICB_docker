@@ -8,7 +8,7 @@ hhsuite = /usr/bin/
 swissprot = /
 signalp = /signalp-4.1
 tmhmm = /tmhmm-2.0c/bin/
-interproscan = /interproscan/
+interproscan = /interproscan-5.16-55.0/
 iupred = /iupred-1.0/
 #modify number of cpus accordingly to your system specifications
 cpus = 2
