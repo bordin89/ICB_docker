@@ -1,8 +1,8 @@
-# ICB_pipeline
+# ICB
 
 Welcome to ICB!
 
-ICB is a computational pipeline for protein annotation. Using an integrative approach, it allows the user to annotate several protein features such as domains, TMHs, disorder and identity through PSIBLAST, HHpred and InterProScan.
+ICBdocker is a computational pipeline for protein annotation. Using an integrative approach, it allows the user to annotate several protein features such as domains, TMHs, disorder and identity through PSIBLAST, HHpred and InterProScan.
 
 The input: your sequences in a single multiFASTA file.
 
