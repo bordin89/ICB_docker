@@ -52,7 +52,7 @@ docker run -it -v /cluster/data/proteomes/e_coli_proteome.fasta:/data/ bordin89/
 
 ### 4. Run ICB
 
-Enter your folder containing your data.
+Enter the folder containing your data.
 
 ```
 cd data/
