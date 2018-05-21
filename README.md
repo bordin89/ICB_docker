@@ -6,7 +6,7 @@ ICBdocker is a computational pipeline for protein annotation. Using an integrati
 
 ## Description of the modules
 
-### PSIBLAST (-psiblast)
+#### PSIBLAST (-psiblast)
 
 The PSIBLAST performs an homology search of your protein on UniProt/SwissProt, which will provide information on similar hits with their Gene Ontology (GO), keywords and Enzyme Commission (EC) numbers. 
 
