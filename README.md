@@ -4,9 +4,51 @@ Welcome to ICB!
 
 ICBdocker is a computational pipeline for protein annotation. Using an integrative approach, it allows the user to annotate several protein features such as domains, TMHs, disorder and identity through PSIBLAST, HHpred and InterProScan.
 
+## Description of the modules
+
+PSIBLAST (-psiblast)
+
+The PSIBLAST performs an homology search of your protein on UniProt/SwissProt, which will provide information on similar hits with their Gene Ontology (GO), keywords and Enzyme Commission (EC) numbers. 
+
+HHPred on PDB (-hhpred)
+
+HHpred consists of several tools that allows to map your sequence on the Protein Data Bank (PDB). This modules provides information on proteins that are structurally similar to your proteins of interest, including information on function, GOs and EC numbers. You can obtain from the raw data the alignments for eventual modelization using tools like MODELLER.
+
+HHblits on UniProt (-hhblits)
+
+HHblits maps sequence domains on your proteins by creating a multiple sequence alignment based on the UniProt20 Hidden Markov Model Database. Secondary structure prediction of the sequence is added using PSIPRED, increasing the sensitivity of HHblits.
+
+InterProScan (-ipr)
+
+InterProScan searches for protein signatures on several databases, including PFAM, PANTHER and SUPERFAMILY among others, and results are parsed for KEGG-pathway entries and additional GO terms. 
+
+SignalP (-sigp)
+
+SignalP predicts the presence or absence of a signal peptide on your sequences, indicating the probability of them to be excreted. 
+
+IUPRED (-iup)
+
+IUPRED predicts the average level of disorder of your protein, giving information on the globular portions of the input proteins.
+
+TMHMM (-tmh)
+
+TMHMM predicts the presence and localization of TransMembrane Helices (TMHs) on the provided sequences, indicating with portions of the proteins are extracellular or periplasmic.
+
+
+## The input and the output
+
 The input: your sequences in a single multiFASTA file.
 
-The output: DataTables to browse your data (example: http://pvcbacteria.org/mywiki/pipeline-tables/Chlamydia_trachomatis.html), a tabular output and raw data from the predictors.
+The output: DataTables to browse your data (example: http://pvcbacteria.org/mywiki/pipeline-tables/Chlamydia_trachomatis.html), 
+
+![alt text](http://pvcbacteria.org/bay042f4.png)
+
+a tabular-separated-values file (Can be imported into R or Excel).
+
+![alt text](http://pvcbacteria.org/bay_tsv.png)
+
+and raw data from the predictors.
+
 
 
 
@@ -16,8 +58,9 @@ The output: DataTables to browse your data (example: http://pvcbacteria.org/mywi
 ### System Requirements
 
 ICB pipeline runs on every system architecture and OS supported by Docker. 
-The pipeline supports multicore systems. While the Docker container can run even on a laptop, the pipeline requires a discrete amount of hard disk space (~130GB) due to databases size and was built with server-side processing in mind.
-Downloading through a high-speed broadband connection is strongly suggested.
+The pipeline supports multicore systems. 
+#### While the Docker container can run even on a laptop, the pipeline requires a discrete amount of hard disk space (~130GB) due to databases size and was built with server-side processing in mind.
+#### Downloading through a high-speed broadband connection is strongly suggested.
 
 The setup is quite easy.
 
@@ -70,7 +113,7 @@ python /ICB_docker/icb.py -i my_sequences.fasta -all
 python /ICB_docker/icb.py -i my_sequences.fasta -tmh -hhblits -hhpred -iup -psiblast
 ```
 
-Modules and command-line parameters
+Modules and related command-line parameters
 
 >PSIBLAST (-psiblast)
 
