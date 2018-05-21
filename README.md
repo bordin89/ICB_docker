@@ -39,7 +39,7 @@ TMHMM predicts the presence and localization of TransMembrane Helices (TMHs) on 
 
 The input: your sequences in a single multiFASTA file.
 
-The output: DataTables to browse your data (example: http://pvcbacteria.org/mywiki/pipeline-tables/Chlamydia_trachomatis.html), 
+The output: DataTables to browse your data (example: http://pvcbacteria.org/mywiki/pipeline-tables/Blastopirellula_marina.html), 
 
 ![alt text](http://pvcbacteria.org/bay042f4.png)
 
