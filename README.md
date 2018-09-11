@@ -38,10 +38,15 @@ TMHMM predicts the presence and localization of TransMembrane Helices (TMHs) on 
 ## The input and the output
 
 The input: your sequences in a single multiFASTA file.
+
 ### EACH FASTA HEADER NEEDS TO BE EITHER IN A UNIPROT OR GENBANK FORMAT!!
+
 UniProt header example: 
+
 \>tr|A0A015K2T4|A0A015K2T4_9GLOM
+
 GenBank header example:
+
 \>gi|497643701|ref|WP_009957885.1| GDP-fucose synthetase [Verrucomicrobium spinosum]
 
 The output: DataTables to browse your data (example: http://pvcbacteria.org/mywiki/pipeline-tables/Blastopirellula_marina.html), 
